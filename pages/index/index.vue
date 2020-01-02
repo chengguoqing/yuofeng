@@ -1,45 +1,12 @@
 <template>
-	<view>
-		<scroll-view class="tajhxetxe w100" scroll-x="true" >
-			<view class="ov pl20">
-				<view class="fz28 z6 shhxeertx" v-for="(sd,idx) in menusd" :class="idx ==idxs?'act':''" @tap="qiehuna(idx)">
-					{{sd}}
-				</view>
-			</view>
-		</scroll-view>
-		<view class="pt20 pm20 fz32 cen">
-			待发运单52票
+	<view class="">
+		<view class=" xetxertxe pd pt20 pr">
+			<navigator :url="sd.url" class="hhgxdert pd" v-for="sd in jhgder" :class="sd.classname">
+				<image :src="sd.icons" class="cz" mode="widthFix"></image>
+				<text class="fz36 cf cz">{{sd.name}}</text>
+			</navigator>
 		</view>
-		<view class="pd">
-			<view class="jhssdcase bgff mb20" v-for="sd in 20">
-				<view class="fz30 cf ytyticrert pd pt10 pm10">
-					系统编号：191113040手工单号：022451
-				</view>
-				<view class="fz28 z6 pd pt20 pm20">
-					<view class="dfdfg_eer">
-						日期：2019-11-13
-					</view>
-					<view class="dfdfg_eer">
-						到达站：萧山
-					</view>
-					<view class="dfdfg_eer">
-						收货人：张三
-					</view>
-					<view class="dfdfg_eer">
-						电话：13961112415
-					</view>
-					<view class="dfdfg_eer">
-						货名：助力车
-					</view>
-					<view class="dfdfg_eer">
-						件数：3
-					</view>
-					<view class="qc"></view>
-				</view>
-				<view class="btm tr pd ls fz28 z6 pt10 pm10">
-					详情 <text class="ml20">追踪</text>
-				</view>
-			</view>
+		<view class="bhxdrrt">
 		</view>
 	</view>
 </template>
@@ -47,74 +14,84 @@
 	export default {
 		data() {
 			return {
-				idxs: 0,
-				menusd: ['待发运单', '超时运单', '退货运单', '等通知/代收运单']
+				jhgder: [{
+					name: '网点运价',
+					classname: 'aa',
+					icons: '../../static/img/dsfdsfa.png',
+					url: '/pages/index/DotFreight'
+				}, {
+					name: '我的运单',
+					classname: 'ab',
+					icons: '../../static/img/dsfdsfb.png',
+					url: ''
+				}, {
+					name: '预警运单',
+					classname: 'ac',
+					icons: '../../static/img/dsfdsff.png',
+					url: '/pages/earlyWarning/index'
+				}, {
+					name: '我的理赔',
+					classname: 'ad',
+					icons: '../../static/img/dsfdsfh.png',
+					url: ''
+				}, {
+					name: '客户评价',
+					classname: 'ae',
+					icons: '../../static/img/dsfdsfg.png',
+					url: ''
+				}, {
+					name: '运营分析',
+					classname: 'af',
+					icons: '../../static/img/dsfdsfd.png',
+					url: ''
+				}, {
+					name: '在线下单',
+					classname: 'ag',
+					icons: '../../static/img/dsfdsfe.png',
+					url: ''
+				}]
 			}
 		},
-		onPullDownRefresh() {
-			setTimeout(function() {
-				uni.stopPullDownRefresh();
-			}, 1000);
-		},
-		components: {
-
-		},
-		methods: {
-			qiehuna (idx){
-				this.idxs = idx
-			}
-		},
-		mounted() {
-
-		}
+		components: {},
+		methods: {},
+		mounted() {}
 	}
 </script>
 <style scoped>
-	.tajhxetxe {
-		height: 80upx;
-		background: #fff;
-		line-height: 80upx;
-		border-bottom: 1px solid #e0e0e0;
-		white-space:nowrap;
-		position: sticky;
-		top: 0;
-		left: 0;
-		z-index: 100;
-		/* #ifdef H5 */
-			top: 88upx;
-		/* #endif */
+	.xetxertxe {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-	.shhxeertx{
-		display: inline-block;
-		padding-left:20upx;
-		padding-right: 20upx;
-		position: relative;
-	}
-	.shhxeertx.act{
-		color: #00a0e9;
-	}
-	.shhxeertx.act:after{
-		content: ' ';
-		position: absolute;
-		left: 0;
-		bottom: 4upx;
-		width: 100%;
-		height: 4upx;
-		z-index: 100;
-		background: #00a0e9;
-	}
-	.ytyticrert{
-		background: #00a0e9;
-		
-	}
-	.dfdfg_eer{
-		width: 50%;
-		float: left;
-		line-height: 60upx;
-	}
-	.jhssdcase{
+
+	.hhgxdert {
+		width: 48.8%;
+		height: 190upx;
+		line-height: 190upx;
 		border-radius: 8upx;
-		border: 1px solid #e0e0e0;
-		overflow: hidden;
+		margin-top: 20upx;
+		background: linear-gradient(to right,#AED0FF ,#69A3F3 );
+	}
+	.hhgxdert image{
+		width: 126upx;
+		margin-right: 20upx;
+	}
+	.hhgxdert.ab{
+		background: linear-gradient(to right, #81EFD9, #2EC480);
+	}
+	.hhgxdert.ac{
+		background: linear-gradient(to right,#FDC18C ,#F4903A );
+	}
+	.hhgxdert.ad{
+		background: linear-gradient(to right,#CDA5F7 ,#964CE4 );
+	}
+	.hhgxdert.ae{
+		background: linear-gradient(to right,#B7BBFF ,#5862EF );
+	}
+	.hhgxdert.af{
+		background: linear-gradient(to right,#FF9FD3 , #E93F99);
+	}
+	.hhgxdert.ag{
+		background: linear-gradient(to right,#FF9AA8 , #F55A70);
 	}
 </style>

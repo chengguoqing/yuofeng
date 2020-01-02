@@ -1,3 +1,49 @@
-page{
+page {
 	background: #f8f8f8;
+}
+
+uni-button[type=primary] {
+	color: #fff;
+	background-color: #00a0e9;
+}
+
+.bhxdrrt {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+.dxform .uni-list-item {
+	background: #fff !important;
+}
+
+.jjhhxeer {
+	width: 160upx;
+}
+
+.dxlisteetr {
+	background: #fff;
+	line-height: 80upx;
+	position: relative;
+}
+
+.dxlisteetr:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	background-color: #e5e5e5;
+}
+.rightydeer{
+	width: 34upx;
+	position: absolute;
+	right: 20upx;
+	top: 30upx;
 }

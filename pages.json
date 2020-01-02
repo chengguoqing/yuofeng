@@ -1,18 +1,65 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/user/loading",
+			"bz": "登录",
+			"style": {
+				"navigationBarTitleText": "驼峰",
+				"backgroundColor": "#FFFFFF",
+				"app-plus": {
+					"titleNView": false
+				}
+				
+			}
+		},{
 			"path": "pages/index/index",
 			"bz": "首页",
 			"style": {
-				"navigationBarTitleText": "独行工匠",
+				"navigationBarTitleText": "驼峰",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/earlyWarning/index",
+			"bz": "预警运单",
+			"style": {
+				"navigationBarTitleText": "预警运单",
 				"backgroundColor": "#e0e0e0",
 				"enablePullDownRefresh": true //开启下拉刷新
 			}
+		},
+		{
+			"path": "pages/index/DotFreight",
+			"bz": "网点运价",
+			"style": {
+				"navigationBarTitleText": "网点运价",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/earlyWarning/trace",
+			"bz": "运单追踪",
+			"style": {
+				"navigationBarTitleText": "运单追踪",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/earlyWarning/details",
+			"bz": "运单详情",
+			"style": {
+				"navigationBarTitleText": "运单详情",
+				"backgroundColor": "#e0e0e0"
+			}
 		}
+		
 	],
 
 	"globalStyle": {
 		"backgroundColor": "#F8F8F8",
-		"navigationBarBackgroundColor": "#00a0e9"
+		"navigationBarBackgroundColor": "#00a0e9",
+		"usingComponents": {
+			"van-cell-group": "/components/uni-list/uni-list"
+		}
 	}
 }

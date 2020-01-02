@@ -1,5 +1,5 @@
-var url_d = "https://www.gxbs.net/mm/",
-urlse='http://yapi.demo.qunar.com/mock/53256/'
+var url_d = "http://www.duxinggj.com/",
+	urlse = 'http://yapi.demo.qunar.com/mock/53256/'
 exports.base = {
 	install: function(Vue, options) {
 		Vue.prototype.version = "9.2.1"
@@ -33,11 +33,10 @@ exports.base = {
 				});
 			})
 		}
-		Vue.prototype.get = function( canshu,urls) {
-			urls = urls || 'index.php'
+		Vue.prototype.get = function(urls, canshu, ty) {
 			return new Promise((resolve, reject) => {
 				uni.request({
-					url: url_d +urls,
+					url: url_d + urls,
 					method: "get",
 					data: canshu,
 					success: (res) => {
@@ -46,10 +45,11 @@ exports.base = {
 				});
 			})
 		}
-		Vue.prototype.geter = function(urle,canshu, ty) {
+
+		Vue.prototype.geter = function(urle, canshu, ty) {
 			return new Promise((resolve, reject) => {
 				uni.request({
-					url: urlse+urle,
+					url: urlse + urle,
 					method: "get",
 					data: canshu,
 					success: (res) => {
@@ -73,7 +73,7 @@ exports.base = {
 
 		Vue.prototype.time_d = function(t) {
 			let time = new Date()
-			time.setTime(t*1000)
+			time.setTime(t * 1000)
 			let Year = time.getFullYear(),
 				Month = time.getMonth() + 1,
 				Data = time.getDate() < 10 ? 0 + '' + time.getDate() : time.getDate(),
