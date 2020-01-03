@@ -51,6 +51,46 @@
 				"navigationBarTitleText": "运单详情",
 				"backgroundColor": "#e0e0e0"
 			}
+		},
+		{
+			"path": "pages/operationAnalysis/index",
+			"bz": "运营分析",
+			"style": {
+				"navigationBarTitleText": "运营分析",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/MyWaybill/index",
+			"bz": "我的运单",
+			"style": {
+				"navigationBarTitleText": "我的运单",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/MyWaybill/settlement",
+			"bz": "理赔",
+			"style": {
+				"navigationBarTitleText": "理赔",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/MyWaybill/ClaimsThat",
+			"bz": "理赔说明",
+			"style": {
+				"navigationBarTitleText": "理赔说明",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/MyWaybill/evaluate",
+			"bz": "发货评价",
+			"style": {
+				"navigationBarTitleText": "发货评价",
+				"backgroundColor": "#e0e0e0"
+			}
 		}
 		
 	],

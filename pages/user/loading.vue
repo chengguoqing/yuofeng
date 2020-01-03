@@ -45,6 +45,8 @@
 	}
 	.hggsinput{
 		box-shadow: 0 0 20upx rgba(0,0,0,0.2);
+		border-radius: 10upx;
+		overflow: hidden;
 	}
 	.hggsinput input {
 		height: 90upx;

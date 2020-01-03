@@ -1,12 +1,17 @@
 <template>
 	<view>
-		<scroll-view class="tajhxetxe w100" scroll-x="true" >
+		<!-- <scroll-view class="tajhxetxe w100" scroll-x="true" >
 			<view class="ov pl20">
 				<view class="fz28 z6 shhxeertx" v-for="(sd,idx) in menusd" :class="idx ==idxs?'act':''" @tap="qiehuna(idx)">
 					{{sd}}
 				</view>
 			</view>
-		</scroll-view>
+		</scroll-view> -->
+		<view class="row tajhxetxe w100 cen">
+			<view class="col fz28 z6 shhxeertx" v-for="(sd,idx) in menusd" :key="idx" :class="idx ==idxs?'act':''" @tap="qiehuna(idx)">
+				{{sd}}
+			</view>
+		</view>
 		<view class="pt20 pm20 fz32 cen">
 			待发运单52票
 		</view>
@@ -49,7 +54,7 @@
 		data() {
 			return {
 				idxs: 0,
-				menusd: ['待发运单', '超时运单', '退货运单', '等通知/代收运单']
+				menusd: ['超时运单', '等通知/代收运单', '待发运单', '退货运单']
 			}
 		},
 		onPullDownRefresh() {
@@ -76,51 +81,5 @@
 	}
 </script>
 <style scoped>
-	.tajhxetxe {
-		height: 80upx;
-		background: #fff;
-		line-height: 80upx;
-		border-bottom: 1px solid #e0e0e0;
-		white-space:nowrap;
-		position: sticky;
-		top: 0;
-		left: 0;
-		z-index: 100;
-		/* #ifdef H5 */
-			top: 88upx;
-		/* #endif */
-	}
-	.shhxeertx{
-		display: inline-block;
-		padding-left:20upx;
-		padding-right: 20upx;
-		position: relative;
-	}
-	.shhxeertx.act{
-		color: #00a0e9;
-	}
-	.shhxeertx.act:after{
-		content: ' ';
-		position: absolute;
-		left: 0;
-		bottom: 4upx;
-		width: 100%;
-		height: 4upx;
-		z-index: 100;
-		background: #00a0e9;
-	}
-	.ytyticrert{
-		background: #00a0e9;
-		
-	}
-	.dfdfg_eer{
-		width: 50%;
-		float: left;
-		line-height: 60upx;
-	}
-	.jhssdcase{
-		border-radius: 8upx;
-		border: 1px solid #e0e0e0;
-		overflow: hidden;
-	}
+	
 </style>

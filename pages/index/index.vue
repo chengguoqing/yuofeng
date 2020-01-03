@@ -23,7 +23,7 @@
 					name: '我的运单',
 					classname: 'ab',
 					icons: '../../static/img/dsfdsfb.png',
-					url: ''
+					url: '/pages/MyWaybill/index'
 				}, {
 					name: '预警运单',
 					classname: 'ac',
@@ -43,7 +43,7 @@
 					name: '运营分析',
 					classname: 'af',
 					icons: '../../static/img/dsfdsfd.png',
-					url: ''
+					url: '/pages/operationAnalysis/index'
 				}, {
 					name: '在线下单',
 					classname: 'ag',
