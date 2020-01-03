@@ -52,7 +52,7 @@
 						<radio value="1" color="#00a0e9" style="transform:scale(0.8)" /><text>自提</text>
 					</label>
 					<label class="radio ml50">
-						<radio value="2" color="#00a0e9" style="transform:scale(0.8)" /><text>自提</text>
+						<radio value="2" color="#00a0e9" style="transform:scale(0.8)" /><text>送货</text>
 					</label>
 				</radio-group>
 			</view>

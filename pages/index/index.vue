@@ -48,7 +48,7 @@
 					name: '在线下单',
 					classname: 'ag',
 					icons: '../../static/img/dsfdsfe.png',
-					url: ''
+					url: '/pages/onlineOrder/index'
 				}]
 			}
 		},

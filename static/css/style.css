@@ -136,3 +136,9 @@ uni-button[type=primary] {
 		height: 100%;
 		
 	}
+	.uni-section{
+		height: 60upx !important;
+	}
+	.uni-section:after{
+		display: none;
+	}

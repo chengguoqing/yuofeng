@@ -123,6 +123,14 @@
 				"navigationBarTitleText": "发货评价",
 				"backgroundColor": "#e0e0e0"
 			}
+		},
+		{
+			"path": "pages/onlineOrder/index",
+			"bz": "在线下单",
+			"style": {
+				"navigationBarTitleText": "在线下单",
+				"backgroundColor": "#e0e0e0"
+			}
 		}
 		
 	],
