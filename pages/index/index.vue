@@ -33,12 +33,12 @@
 					name: '我的理赔',
 					classname: 'ad',
 					icons: '../../static/img/dsfdsfh.png',
-					url: ''
+					url: '/pages/MyClaim/index'
 				}, {
 					name: '客户评价',
 					classname: 'ae',
 					icons: '../../static/img/dsfdsfg.png',
-					url: ''
+					url: '/pages/ClientEvaluation/index'
 				}, {
 					name: '运营分析',
 					classname: 'af',

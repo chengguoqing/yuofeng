@@ -91,6 +91,38 @@
 				"navigationBarTitleText": "发货评价",
 				"backgroundColor": "#e0e0e0"
 			}
+		},
+		{
+			"path": "pages/MyClaim/index",
+			"bz": "我的理赔",
+			"style": {
+				"navigationBarTitleText": "我的理赔",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/MyClaim/details",
+			"bz": "详情",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/ClientEvaluation/index",
+			"bz": "客户评价",
+			"style": {
+				"navigationBarTitleText": "客户评价",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/ClientEvaluation/details",
+			"bz": "发货评价",
+			"style": {
+				"navigationBarTitleText": "发货评价",
+				"backgroundColor": "#e0e0e0"
+			}
 		}
 		
 	],

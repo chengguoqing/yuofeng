@@ -109,11 +109,10 @@ uni-button[type=primary] {
 }
 .sdeeer{
 	position: absolute;
-	right: -20upx;
-	top: -60upx;
+	right: -10upx;
+	top: -10upx;
 	z-index: 100;
-}
-.sdeeer .uni-icon-cancel{
+	width: 40upx;
 	background: #fff;
 	border-radius: 50%;
 }

@@ -57,8 +57,7 @@
 				<view class="col" >
 					<view class="jhhxedertxc cz pr" v-for="(sd,idx) in imgdf">
 						<image :src="sd.path"  class="dsfrrt"  @tap="liussd(sd.path)"></image>
-						<text  @tap.stop="closee(idx)" class="sdeeer" > 
-						 <icon type="cancel" size="24" /></text>
+						<image src="../../static/img/close.png" mode="widthFix" @tap.stop="closee(idx)" class="sdeeer"></image>
 					</view>
 					<view class="jhhxedertxc cz pr" @tap="sxde">
 						<image src="../../static/img/Add.png" mode="widthFix" class="addickdeert cz"></image>
