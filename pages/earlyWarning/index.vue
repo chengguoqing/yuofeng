@@ -13,7 +13,7 @@
 			</view>
 		</view>
 		<view class="pt20 pm20 fz32 cen">
-			待发运单52票
+			{{menusd[idxs]}}52票
 		</view>
 		<view class="pd">
 			<view class="jhssdcase bgff mb20" v-for="sd in 20">

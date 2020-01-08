@@ -79,7 +79,7 @@
         "usingComponents" : true
     },
     "h5" : {
-        "title" : "UbioeMall_APP",
+        "title" : "驰峰",
         "domain" : "http://duxinggj.com/",
         "router" : {
             "base" : "www/phone/test2020/"

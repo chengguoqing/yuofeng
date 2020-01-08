@@ -62,7 +62,7 @@
 						<view class="qc"></view>
 					</view>
 					<view class="btm tr pd ls fz28 z6 pt10 pm10">
-						<text @tap="hf('/pages/MyClaim/details')">详情</text> 
+						<text @tap="hf('/pages/ClientEvaluation/details')">详情</text> 
 					</view>
 				</view>
 			</view>

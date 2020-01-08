@@ -153,8 +153,8 @@
 							</label>
 						</radio-group>
 					</view>
-					<view class="dsfdsrtxwe" v-if="form.dfdfdda==2">
-						<button type="primary" class="fz24" @tap="mhhad">自提网点选择</button>
+					<view class="dsfdsrtxwe" v-if="form.dfdfdda==1">
+						<button type="primary" class="fz24" @tap="hf('/pages/test')">自提网点选择</button>
 					</view>
 				</view>
 			</view>
@@ -163,7 +163,7 @@
 					<text class="cz">自提网点编号:</text>
 				</view>
 				<view class="col ">
-					<input type="text" value="" placeholder="请输入自提网点编号：" v-model="form.dsfsdfk" />
+					<input type="text" value="" placeholder="请输入自提网点编号：" v-model="form.dsfsdfkq" />
 				</view>
 			</view>
 			<view class="row dxlisteetr pd"  v-if="form.dfdfdda==1">
@@ -171,7 +171,7 @@
 					<text class="cz">自提网点地址:</text>
 				</view>
 				<view class="col ">
-					<input type="text" value="" placeholder="请输入自提网点地址" v-model="form.dsfsdfl" />
+					<input type="text" value="" placeholder="请输入自提网点地址" v-model="form.dsfsdflq" />
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -226,10 +226,10 @@
 			</view>
 			<view class="row dxlisteetr pd">
 				<view class="fz28 z6 jjhhxeer">
-					<text class="cz">现金：</text>
+					<text class="cz">现付：</text>
 				</view>
 				<view class="col">
-					<input type="text"  placeholder="请输入手工单号" v-model="form.feiderb" />
+					<input type="text"  placeholder="请输入现付" v-model="form.feiderb" />
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -304,7 +304,9 @@
 					feiderc:'',
 					feiderd:'',
 					feidere:'',
-					feiderf:''
+					feiderf:'',
+					dsfsdfkq:'',
+					dsfsdflq:''
 				},
 				ssdea: -1,
 				rangea:['无','卸货（不上楼）','卸货（含上楼）'],

@@ -5,7 +5,7 @@
 				<text class="cz">运单编号：</text>
 			</view>
 			<view class="col">
-				<input type="text" value="" placeholder="请输入运单编号" />
+				<input type="text" disabled value="11111254" placeholder="请输入运单编号" />
 			</view>
 		</view>
 		<view class="row dxlisteetr pd">

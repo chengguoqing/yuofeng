@@ -1,7 +1,7 @@
 <template>
 	<view>
-		<canvas canvas-id="canvasRing" id="canvasRing" class="charts" :width="cWidth*pixelRatio" :height="cHeight*pixelRatio"
-		 :style="{'width':cWidth+'px','height':cHeight+'px'}" @touchstart="touchPie($event,'canvasRing')"></canvas>
+		<canvas :canvas-id="ids" :id="ids" class="charts" :width="cWidth*pixelRatio" :height="cHeight*pixelRatio"
+		 :style="{'width':cWidth+'px','height':cHeight+'px'}" @touchstart="touchPie($event,ids)"></canvas>
 		<view class="pd mt40">
 			<view class="genaral-area">
 				<view class="flex-box tc thead">
@@ -29,6 +29,7 @@
 	var _self;
 	var canvasObj = {};
 	export default {
+		props:['kkxer','ids'],
 		data() {
 			return {
 				cWidth: '',
@@ -70,31 +71,8 @@
 			_self = this
 			this.cWidth = uni.upx2px(750);
 			this.cHeight = uni.upx2px(500);
-			let xdeder = {
-				"series": [{
-					"name": "北京",
-					"data": 50
-				}, {
-					"name": "上海",
-					"data": 30
-				}, {
-					"name": "常州",
-					"data": 20
-				}, {
-					"name": "无锡",
-					"data": 18
-				}, {
-					"name": "杭州",
-					"data": 8
-				}, {
-					"name": "潇山",
-					"data": 8
-				}, {
-					"name": "西安",
-					"data": 8
-				}]
-			}
-			this.showPie("canvasRing", xdeder);
+			let xdeder = this.kkxer 
+			this.showPie(this.ids, xdeder);
 
 		}
 	}

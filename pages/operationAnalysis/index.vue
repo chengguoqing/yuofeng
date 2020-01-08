@@ -28,7 +28,26 @@
 			</view>
 		</view>
 		<view class="">
-			<list></list>
+			<view class="" v-if="idxs==0">1
+				<list :kkxer="xdder" ids="sewerra"></list>
+			</view>
+			<view class="" v-if="idxs==1">2
+				<list :kkxer="xdderb" v-if="idxs==1" ids="sewerrb"></list>
+			</view>
+			<view class="" v-if="idxs==2">3
+				<list :kkxer="xdderc" v-if="idxs==2" ids="sewerrc"></list>
+			</view>
+			<view class="" v-if="idxs==3">4
+				<list :kkxer="xdderd" v-if="idxs==3" ids="sewerrd"></list>
+			</view>
+			<view class="" v-if="idxs==4">5
+				<list :kkxer="xddere" v-if="idxs==4" ids="sewerre"></list>
+			</view>
+
+
+
+
+
 		</view>
 	</view>
 </template>
@@ -40,7 +59,88 @@
 				startime: '',
 				endtime: '',
 				idxs: 0,
-				menusd: ['运单分布', '费用分布', '准点率', '货损率', '好评率']
+				menusd: ['运单分布', '费用分布', '准点率', '货损率', '好评率'],
+				xdder: {
+					"series": [{
+						"name": "北京",
+						"data": 50
+					}, {
+						"name": "上海",
+						"data": 30
+					}, {
+						"name": "常州",
+						"data": 20
+					}, {
+						"name": "无锡",
+						"data": 18
+					}, {
+						"name": "杭州",
+						"data": 8
+					}, {
+						"name": "潇山",
+						"data": 8
+					}, {
+						"name": "西安",
+						"data": 8
+					}]
+				},
+				xdderb: {
+					"series": [{
+						"name": "北京",
+						"data": 50
+					}, {
+						"name": "上海",
+						"data": 30
+					}, {
+						"name": "常州",
+						"data": 20
+					}]
+				},
+				xdderc: {
+					"series": [{
+						"name": "常州",
+						"data": 20
+					}, {
+						"name": "无锡",
+						"data": 18
+					}, {
+						"name": "杭州",
+						"data": 8
+					}, {
+						"name": "潇山",
+						"data": 8
+					}, {
+						"name": "西安",
+						"data": 8
+					}]
+				},
+				xdderd: {
+					"series": [{
+						"name": "北京",
+						"data": 50
+					}, {
+						"name": "上海",
+						"data": 30
+					}, , {
+						"name": "杭州",
+						"data": 8
+					}, {
+						"name": "潇山",
+						"data": 8
+					}, {
+						"name": "西安",
+						"data": 8
+					}]
+				},
+				xddere: {
+					"series": [{
+						"name": "潇山",
+						"data": 8
+					}, {
+						"name": "西安",
+						"data": 8
+					}]
+				},
 			}
 		},
 		components: {
@@ -57,8 +157,7 @@
 				this.idxs = idx
 			}
 		},
-		mounted() {
-		}
+		mounted() {}
 	}
 </script>
 <style scoped>
@@ -80,7 +179,8 @@
 		right: 20upx;
 		top: 14upx;
 	}
-	.xrttyxweret{
+
+	.xrttyxweret {
 		position: sticky;
 		left: 0;
 		top: 0;

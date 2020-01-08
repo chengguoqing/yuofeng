@@ -49,6 +49,11 @@
 					classname: 'ag',
 					icons: '../../static/img/dsfdsfe.png',
 					url: '/pages/onlineOrder/index'
+				}, {
+					name: '安装售后',
+					classname: 'ah',
+					icons: '../../static/img/dsfdsfb.png',
+					url: ''
 				}]
 			}
 		},

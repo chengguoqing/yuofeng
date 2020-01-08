@@ -4,7 +4,7 @@
 			"path": "pages/user/loading",
 			"bz": "登录",
 			"style": {
-				"navigationBarTitleText": "驼峰",
+				"navigationBarTitleText": "驰峰",
 				"backgroundColor": "#FFFFFF",
 				"app-plus": {
 					"titleNView": false
@@ -15,7 +15,7 @@
 			"path": "pages/index/index",
 			"bz": "首页",
 			"style": {
-				"navigationBarTitleText": "驼峰",
+				"navigationBarTitleText": "驰峰",
 				"backgroundColor": "#e0e0e0"
 			}
 		},
@@ -126,6 +126,14 @@
 		},
 		{
 			"path": "pages/onlineOrder/index",
+			"bz": "在线下单",
+			"style": {
+				"navigationBarTitleText": "在线下单",
+				"backgroundColor": "#e0e0e0"
+			}
+		},
+		{
+			"path": "pages/test",
 			"bz": "在线下单",
 			"style": {
 				"navigationBarTitleText": "在线下单",

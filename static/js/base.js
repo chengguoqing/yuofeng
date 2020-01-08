@@ -45,7 +45,17 @@ exports.base = {
 				});
 			})
 		}
-
+		Vue.prototype.getdizhi = function(diz) {
+			return new Promise((resolve, reject) => {
+				uni.request({
+					url: 'https://restapi.amap.com/v3/geocode/geo?key=1ca50beb27f893268297a00cdb0acdf3&address='+diz+'&city=%E5%85%A8%E5%9B%BD',
+					method: "get",
+					success: (res) => {
+						resolve(res.data.geocodes[0].location)
+					}
+				});
+			})
+		}
 		Vue.prototype.geter = function(urle, canshu, ty) {
 			return new Promise((resolve, reject) => {
 				uni.request({

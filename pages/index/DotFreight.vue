@@ -39,22 +39,27 @@
 				体积：
 			</view>
 			<view class="col">
-				<input type="text" value="" placeholder="请输入体积" class="fz30" v-model="form.dsfsdfd" />
+				<input type="text" value="" placeholder="请输入体积" class="fz30" v-model="form.dsfsdfe" />
 			</view>
 		</view>
 			<view class="row dxlisteetr pd">
 			<view class="fz30 z6 jjhhxeer">
 				配送方式：
 			</view>
-			<view class="col fz30">
-				<radio-group v-model="form.dsfsdff">
+			<view class="col fz30 row">
+				<view class="col">
+				<radio-group v-model="form.dsfsdff" @change="cewrrtxe">
 					<label class="radio">
-						<radio value="1" color="#00a0e9" style="transform:scale(0.8)" /><text>自提</text>
+						<radio :checked="form.dsfsdff==1?true:false" value="1" color="#00a0e9" style="transform:scale(0.8)" /><text>自提</text>
 					</label>
 					<label class="radio ml50">
-						<radio value="2" color="#00a0e9" style="transform:scale(0.8)" /><text>送货</text>
+						<radio :checked="form.dsfsdff==2?true:false" value="2" color="#00a0e9" style="transform:scale(0.8)" /><text>送货</text>
 					</label>
 				</radio-group>
+				</view>
+				<view class="dsfdsrtxwe" v-if="form.dsfsdff==1">
+					<button type="primary" class="fz24" @tap="hf('/pages/test')">自提网点选择</button>
+				</view>
 			</view>
 		</view>
 		<view class="row dxlisteetr pd">
@@ -88,7 +93,41 @@
 		</view>
 		
 		<view class="pd mt40">
-			<button type="primary" class="fz32">查询</button>
+			<button type="primary" class="fz32" @tap="isxiansh=true">查询</button>
+		</view>
+		<view class="row pd pt20" v-if="form.dsfsdff ==2&&isxiansh">
+			<view class="col fz28 z3">
+				运价：300
+			</view>
+			<view class="col tr fz28">
+				预计到达时间：5天
+			</view>
+		</view>
+		<view class="" v-if="form.dsfsdff ==1&&isxiansh">
+			<view class="row pd pt20" >
+				<view class="col fz28 z3">
+					网点地址：
+				</view>
+				<view class="col tr fz28">
+					网点编号：：5天
+				</view>
+			</view>
+			<view class="row pd pt20" >
+				<view class="col fz28 z3">
+					自提里程：
+				</view>
+				<view class="col tr fz28">
+					自提运费：：5天
+				</view>
+			</view>
+			<view class="row pd pt20  fz28 z3" >
+			预计到达时间：5天
+			</view>
+		</view>
+		
+		<view class="pd fz26 z9 pt40 pm40">
+			备注：1、长度超4.2米，宽度超2.4米，高度超2.8米的异形货，请联系业务经理报价
+			           2、大宗货物请联系业务经理报价
 		</view>
 		<uni-popup ref="showpopup" type="bottom" @change="change">
 			<dxarea @closew="closew"></dxarea>
@@ -107,14 +146,15 @@
 					dsfsdfc:'',
 					dsfsdfd:'',
 					dsfsdfe:'',
-					dsfsdff:'',
+					dsfsdff:'-1',
 					dsfsdfg:'',
 					dsfsdfh:'',
 					dsfsdfi:''
 				},
 				index:-1,
+				isxiansh:false,
 				kxeer:1,//1起始 2 收货地址
-				array: ['卸货（不上楼）', '卸货（含上楼）']
+				array: ['无','卸货（不上楼）', '卸货（含上楼）']
 			}
 		},
 		components: {
@@ -135,7 +175,20 @@
 					this.form.dsfsdfh = e[0].name + '-' + e[1].name + '-'+e[2].name 
 				}
 				this.$refs.showpopup.close()
-			}
+			},
+			mhhad(){
+				uni.chooseLocation({
+				    success: function (res) {
+				        console.log('位置名称：' + res.name);
+				        console.log('详细地址：' + res.address);
+				        console.log('纬度：' + res.latitude);
+				        console.log('经度：' + res.longitude);
+				    }
+				});
+			},
+			cewrrtxe(e){
+				this.form.dsfsdff= e.detail.value
+			},
 		},
 		mounted() {
 			
@@ -148,5 +201,8 @@
 	}
 	.pt25{
 		padding-top: 25upx;
+	}
+	.dsfdsrtxwe{
+		padding-top: 15upx;
 	}
 </style>

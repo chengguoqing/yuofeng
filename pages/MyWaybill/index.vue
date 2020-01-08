@@ -79,13 +79,13 @@
 	</view>
 </template>
 <script>
-	export default {
+	export default { 
 		data() {
 			return {
 				startime: '',
 				endtime: '',
 				index:-1,
-				array: ['全 部', '待发货（备注：网上下单后运单状态）', '已发货（备注：文员、司机开单后运单状态）', '已装车（备注：已配载给外线）', '已签收（备注：客户签收后）']
+				array: ['全 部', '待发货', '已发货', '已装车', '已签收']
 			}
 		},
 		components: {

@@ -4,7 +4,7 @@
 		<uni-steps :options="list2" active-color="#007AFF" :active="active" direction="column" />
 	</view>	
 	<view class="pd pt20 pm20">
-		<button type="primary" class="fz32">查看图片</button>
+		<button type="primary" class="fz32" @tap="liussd">查看图片</button>
 	</view>
 	<uni-list>
 		<uni-list-item :show-arrow="false">
@@ -86,7 +86,15 @@ export default {
     components: {
 		uniSteps
 	},
-    methods: {},
+    methods: {
+		liussd(urle){
+			let sdeer = []
+			sdeer.push('http://duxinggj.com/www/static/img/2.jpg')
+			   uni.previewImage({
+			            urls: sdeer
+			        });
+		}
+	},
     mounted () {}
 }
 </script>
