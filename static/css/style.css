@@ -4,7 +4,7 @@ page {
 
 uni-button[type=primary] {
 	color: #fff;
-	background-color: #00a0e9;
+	background-color: #F39616;
 }
 
 .bhxdrrt {
@@ -72,7 +72,7 @@ uni-button[type=primary] {
 }
 
 .shhxeertx.act {
-	color: #00a0e9;
+	color: #F39616;
 }
 
 .shhxeertx.act:after {
@@ -83,7 +83,7 @@ uni-button[type=primary] {
 	width: 100%;
 	height: 4upx;
 	z-index: 100;
-	background: #00a0e9;
+	background: #F39616;
 }
 
 .dfdfg_eer {
@@ -100,7 +100,7 @@ uni-button[type=primary] {
 
 
 .ytyticrert {
-	background: #00a0e9;
+	background: #F39616;
 
 }
 
@@ -141,4 +141,27 @@ uni-button[type=primary] {
 	}
 	.uni-section:after{
 		display: none;
+	}
+	uni-button[type=primary]{
+		background: #F39616!important;
+	}
+	
+	.dxlisteetr {
+		line-height: 80upx;
+		position: relative;
+	}
+	
+	.dxlisteetr.ay {
+		z-index: 1000;
+	}
+	
+	.kjdsjfrdrte {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 88upx;
+		background: #fff;
+		padding-left: 240upx;
+		font-size: 26upx;
+		color: #666;
 	}

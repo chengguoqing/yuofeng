@@ -31,13 +31,13 @@
 			<view class="col  fz28 z6">
 					<radio-group >
 						<label class="radio">
-							<radio value="1" color="#00a0e9" style="transform:scale(0.8)" /><text class="cz">好评</text>
+							<radio value="1" color="#F39616" style="transform:scale(0.8)" /><text class="cz">好评</text>
 						</label>
 						<label class="radio ml50">
-							<radio value="2" color="#00a0e9" style="transform:scale(0.8)" /><text  class="cz">中评</text>
+							<radio value="2" color="#F39616" style="transform:scale(0.8)" /><text  class="cz">中评</text>
 						</label>
 						<label class="radio ml50">
-							<radio value="2" color="#00a0e9" style="transform:scale(0.8)" /><text  class="cz">差评</text>
+							<radio value="2" color="#F39616" style="transform:scale(0.8)" /><text  class="cz">差评</text>
 						</label>
 					</radio-group>
 			</view>

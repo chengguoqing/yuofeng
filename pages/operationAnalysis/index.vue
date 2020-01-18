@@ -29,19 +29,19 @@
 		</view>
 		<view class="">
 			<view class="" v-if="idxs==0">1
-				<list :kkxer="xdder" ids="sewerra"></list>
+				<list :kkxer="xdder" ids="sewerra" jhshse="1"></list>
 			</view>
 			<view class="" v-if="idxs==1">2
-				<list :kkxer="xdderb" v-if="idxs==1" ids="sewerrb"></list>
+				<list :kkxer="xdderb" v-if="idxs==1" ids="sewerrb" jhshse="2"></list>
 			</view>
 			<view class="" v-if="idxs==2">3
-				<list :kkxer="xdderc" v-if="idxs==2" ids="sewerrc"></list>
+				<list :kkxer="xdderc" v-if="idxs==2" ids="sewerrc" jhshse="3"></list>
 			</view>
 			<view class="" v-if="idxs==3">4
-				<list :kkxer="xdderd" v-if="idxs==3" ids="sewerrd"></list>
+				<list :kkxer="xdderd" v-if="idxs==3" ids="sewerrd" jhshse="4"></list>
 			</view>
 			<view class="" v-if="idxs==4">5
-				<list :kkxer="xddere" v-if="idxs==4" ids="sewerre"></list>
+				<list :kkxer="xddere" v-if="idxs==4" ids="sewerre" jhshse="5"></list>
 			</view>
 
 

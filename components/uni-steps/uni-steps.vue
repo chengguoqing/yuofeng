@@ -129,9 +129,9 @@
 	}
 
 	.uni-steps__column-title {
-		font-size: 28rpx;
+		font-size: 34rpx;
 		text-align: left;
-		line-height: 18px;
+		line-height: 40rpx;
 	}
 
 	.uni-steps__row-desc {

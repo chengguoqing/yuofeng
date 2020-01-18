@@ -126,7 +126,7 @@
 					</view>
 					<view class="row col">
 						<view class="fz28 z3 jjhhxeer">
-							重量(吨)：
+							重量(kg)：
 						</view>
 						<view class="col fz28 z9">
 							0.75
@@ -138,7 +138,7 @@
 				<view class="row">
 					<view class="row col">
 						<view class="fz28 z3 jjhhxeer">
-							体积(方)：
+							体积(m³)：
 						</view>
 						<view class="col fz28 z9">
 							0.6

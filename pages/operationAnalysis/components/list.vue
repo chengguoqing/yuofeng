@@ -3,24 +3,132 @@
 		<canvas :canvas-id="ids" :id="ids" class="charts" :width="cWidth*pixelRatio" :height="cHeight*pixelRatio"
 		 :style="{'width':cWidth+'px','height':cHeight+'px'}" @touchstart="touchPie($event,ids)"></canvas>
 		<view class="pd mt40">
-			<view class="genaral-area">
-				<view class="flex-box tc thead">
-					<view class="item-3">地区</view>
-					<view class="item-3">票数</view>
-					<view class="item-3">占比</view>
-				</view>
-				<view class="flex-box table tc" v-for="sd in 8">
-					<view class="item-3">
-						北京
-					</view>
-					<view class="item-3">
-						50
-					</view>
-					<view class="item-3">
-						40
-					</view>
-				</view>
-			</view>
+			<table class="dfdfrttxze" cellspacing="0" v-if="jhshse==1">
+			                    <thead>
+			                        <tr>
+			                            <td>地区</td>
+			                            <td>票数</td>
+			                            <td>占比</td>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                        <tr v-for="sd in 6">
+			                            <td>北京</td>
+			                            <td>53</td>
+			                            <td>10%</td>
+			                        </tr>
+			                    </tbody>
+			                </table>
+			                <table class="dfdfrttxze" cellspacing="0" v-if="jhshse==2">
+			                   <thead>
+			                        <tr>
+			                            <td>地区</td>
+			                            <td>票数</td>
+			                            <td>占比</td>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                        <tr v-for="sd in 6">
+			                            <td>北京</td>
+			                            <td>53</td>
+			                            <td>10%</td>
+			                        </tr>
+			                    </tbody>
+			                </table>
+			                <table class="dfdfrttxze" cellspacing="0" v-if="jhshse==3">
+			                    <thead>
+			                        <tr>
+			                            <td>总票数</td>
+			                            <td>600</td>
+			                            <td>占比</td>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                        <tr>
+			                            <td>正常</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                        <tr>
+			                            <td>超时一天</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                        <tr>
+			                            <td>超时两天</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                        <tr>
+			                            <td>超时三天</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                        
+			                    </tbody>
+			                </table>
+			                
+			                
+			                
+			                <table class="dfdfrttxze" cellspacing="0" v-if="jhshse==4">
+			                    <thead>
+			                        <tr>
+			                            <td>总票数</td>
+			                            <td>600</td>
+			                            <td>占比</td>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                        <tr >
+			                            <td>正常</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                        <tr >
+			                            <td>货损</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                    </tbody>
+			                </table>
+			                 <table class="dfdfrttxze" cellspacing="0" v-if="jhshse==5">
+			                    <thead>
+			                        <tr>
+			                            <td>总票数</td>
+			                            <td>600</td>
+			                            <td>占比</td>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                        <tr >
+			                            <td>好评</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                        <tr >
+			                            <td>中评</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                        <tr >
+			                            <td>差评</td>
+			                            <td>577</td>
+			                            <td>96.1%</td>
+			                        </tr>
+			                         <tr >
+			                            <td>服务态度</td>
+			                            <td colspan="2">4.9</td>
+			                        </tr>
+			                         <tr >
+			                            <td>物流时效</td>
+			                            <td colspan="2">4.9</td>
+			                        </tr>
+			                         <tr >
+			                            <td>安全到达</td>
+			                            <td colspan="2">4.9</td>
+			                        </tr>
+			                    </tbody>
+			                </table>
 		</view>
 	</view>
 </template>
@@ -29,7 +137,7 @@
 	var _self;
 	var canvasObj = {};
 	export default {
-		props:['kkxer','ids'],
+		props:['kkxer','ids','jhshse'],
 		data() {
 			return {
 				cWidth: '',
@@ -146,4 +254,27 @@
 			}
 		}
 	}
+	
+	
+	.dfdfrttxze {
+	       width: 100%;
+	       border: 1px solid #e0e0e0;
+	       text-align: center;
+	       font-size: 14px;
+	       line-height: 30px;
+	       border-right: 0;
+	       border-bottom: 0
+	   }
+	   .irseerr{
+	       position: relative;
+	       top: 50px;
+	   }
+		
+	   .dfdfrttxze td {
+	       border-right: 1px solid #e0e0e0;
+	       border-bottom: 1px solid #e0e0e0;
+	   }
+			.deeerrtxer{
+				max-width: 400upx;
+			}
 </style>

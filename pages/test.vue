@@ -1,24 +1,32 @@
 <template>
     <view>
 		<view class="pd mt40">
-			<view class="genaral-area">
-				<view class="flex-box tc thead">
-					<view class="item-3">序号</view>
-					<view class="item-3">里程</view>
-					<view class="item-3">地址</view>
-				</view>
-				<view class="flex-box table tc" v-for="sd in 1">
-					<view class="item-3">
-						1
-					</view>
-					<view class="item-3">
-						20KM
-					</view>
-					<view class="item-3">
-						广东省深圳市南山区阳光科创
-					</view>
-				</view>
-			</view>
+			       <table class="dfdfrttxze fz26">
+			                    <thead>
+			                        <tr>
+			                            <td>序号</td>
+			                            <td>里程</td>
+			                            <td>地址</td>
+										<td>操作</td>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                        <tr>
+			                            <td>1</td>
+			                            <td>53</td>
+			                            <td width="200px">
+											<view class="dian deeerrtxer">
+												留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦
+											</view>
+										</td>
+										 <td>
+											 <view class="ls fz26" @tap="getde">
+											 	选择
+											 </view>
+										 </td>
+			                        </tr>
+			                    </tbody>
+			                </table>
 		</view>
 		
 <view class="map_box mt20">
@@ -105,7 +113,6 @@ export default {
 		}
 	},
 	onLoad() {
-		this.getde()
 		 
 	},
     mounted () {
@@ -188,4 +195,28 @@ export default {
 			}
 		}
 	}
+	
+	
+	
+	 .dfdfrttxze {
+	        width: 100%;
+	        border: 1px solid #e0e0e0;
+	        text-align: center;
+	        font-size: 14px;
+	        line-height: 30px;
+	        border-right: 0;
+	        border-bottom: 0
+	    }
+	    .irseerr{
+	        position: relative;
+	        top: 50px;
+	    }
+	
+	    .dfdfrttxze td {
+	        border-right: 1px solid #e0e0e0;
+	        border-bottom: 1px solid #e0e0e0;
+	    }
+		.deeerrtxer{
+			max-width: 400upx;
+		}
 </style>

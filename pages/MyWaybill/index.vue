@@ -52,19 +52,19 @@
 							日期：2019-11-13
 						</view>
 						<view class="dfdfg_eer">
+							运单状态：代发货
+						</view>
+						<view class="dfdfg_eer">
+							货名：阻力车
+						</view>
+						<view class="dfdfg_eer">
 							到达站：萧山
 						</view>
 						<view class="dfdfg_eer">
-							收货人：张三
+							收货人：李四
 						</view>
 						<view class="dfdfg_eer">
-							电话：13961112415
-						</view>
-						<view class="dfdfg_eer">
-							货名：助力车
-						</view>
-						<view class="dfdfg_eer">
-							件数：3
+							电话：150003325124
 						</view>
 						<view class="qc"></view>
 					</view>
@@ -85,7 +85,7 @@
 				startime: '',
 				endtime: '',
 				index:-1,
-				array: ['全 部', '待发货', '已发货', '已装车', '已签收']
+				array: ['全 部', '待发货', '已发货', '已装车', '已签收', '已中转', '已到站']
 			}
 		},
 		components: {

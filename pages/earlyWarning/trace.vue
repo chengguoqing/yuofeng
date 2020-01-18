@@ -1,6 +1,11 @@
 <template>
     <view>
-	<view class="bgff pt40">
+		<view class="pd ">
+			<view class="fz30 pt20 pm20">
+				191113041
+			</view>
+		</view>
+	<view class="bgff pt100 dfgfrtrtsew">
 		<uni-steps :options="list2" active-color="#007AFF" :active="active" direction="column" />
 	</view>	
 	<view class="pd pt20 pm20">
@@ -98,6 +103,8 @@ export default {
     mounted () {}
 }
 </script>
+<style>
+</style>
 <style  scoped>
 
 </style>

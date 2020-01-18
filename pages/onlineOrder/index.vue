@@ -4,6 +4,14 @@
 			<uni-section title="基本信息" type="line"></uni-section>
 			<view class="row dxlisteetr pd">
 				<view class="fz28 z6 jjhhxeer">
+					<text class="cz">运单编号：</text>
+				</view>
+				<view class="col fz26">
+					13333333
+				</view>
+			</view>
+			<view class="row dxlisteetr pd">
+				<view class="fz28 z6 jjhhxeer">
 					<text class="cz">手工单号：</text>
 				</view>
 				<view class="col">
@@ -14,9 +22,11 @@
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">起始站：</text>
 				</view>
-				<view class="col " @tap="ipoe(1)">
-					<text class="z9 fz30 " v-if="!form.dsfsdfb">请选择</text>
-					<text class="z3 fz30 " v-else>{{form.dsfsdfb}}</text>
+				<view class="col ">
+					<picker mode="selector" :range="arrayer" @change="hggdeetswer">
+						<text class="z9 fz30" v-if="form.dsfsdfb < 0">请选择</text>
+						<text class="z3 fz30" v-else>{{arrayer[form.dsfsdfb]}}</text>
+					</picker>
 				</view>
 				<image src="../../static/img/right.png" mode="widthFix" class="rightydeer"></image>
 			</view>
@@ -25,13 +35,13 @@
 					<text class="cz">到达站：</text>
 				</view>
 				<view class="col " @tap="ipoe(2)">
-					<text class="z9 fz30 " v-if="!form.dsfsdfc">请选择</text>
+					<text class="z9 fz30 " v-if="!form.dsfsdfc">请选择省/市/区/镇</text>
 					<text class="z3 fz30 " v-else>{{form.dsfsdfc}}</text>
 				</view>
 				<image src="../../static/img/right.png" mode="widthFix" class="rightydeer"></image>
 			</view>
 		</view>
-		
+
 		<view class="">
 			<uni-section title="托运人信息" type="line"></uni-section>
 			<view class="row dxlisteetr pd">
@@ -39,7 +49,7 @@
 					<text class="cz">托运单位:</text>
 				</view>
 				<view class="col">
-					<input type="text" disabled value=""  v-model="form.dsfsdfd" />
+					<input type="text" disabled value="" v-model="form.dsfsdfd" />
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -59,10 +69,10 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="">
 			<uni-section title="收货人信息" type="line"></uni-section>
-			
+
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">收货人:</text>
@@ -88,17 +98,22 @@
 				</view>
 			</view>
 		</view>
-		
-		
+
+
 		<view class="">
 			<uni-section title="货物信息" type="line"></uni-section>
-			
-			<view class="row dxlisteetr pd">
+
+			<view class="row dxlisteetr pd ay">
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">货物:</text>
 				</view>
 				<view class="col ">
-					<input type="text" value="" placeholder="请输入货物" v-model="form.dsfsdfj" />
+					<input type="text" value="" @input="xrerttswer" placeholder="请输入货物" v-model="form.dsfsdfj" />
+				</view>
+				<view class="kjdsjfrdrte" v-if="xdeewrrty">
+					<view class="fz26 bbm" v-for="(sd,idx) in 5" @tap="jjhhggse('选项'+idx)">
+						选项{{idx}}
+					</view>
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -119,7 +134,7 @@
 			</view>
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
-					<text class="cz">重量(t):</text>
+					<text class="cz">重量(kg):</text>
 				</view>
 				<view class="col ">
 					<input type="number" value="" placeholder="请输入重量" v-model="form.dsfsdfq" />
@@ -134,10 +149,10 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="">
 			<uni-section title="配送信息" type="line"></uni-section>
-			
+
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">配送方式:</text>
@@ -146,10 +161,10 @@
 					<view class="col">
 						<radio-group v-model="form.dfdfdda" @change="cewrrtxe">
 							<label class="radio">
-								<radio :checked="form.dfdfdda==1?true:false" value="1" color="#00a0e9" style="transform:scale(0.8)" /><text>自提</text>
+								<radio :checked="form.dfdfdda==1?true:false" value="1" color="#F39616" style="transform:scale(0.8)" /><text>自提</text>
 							</label>
 							<label class="radio ml50">
-								<radio value="2" :checked="form.dfdfdda==2?true:false" color="#00a0e9" style="transform:scale(0.8)" /><text>送货</text>
+								<radio value="2" :checked="form.dfdfdda==2?true:false" color="#F39616" style="transform:scale(0.8)" /><text>送货</text>
 							</label>
 						</radio-group>
 					</view>
@@ -158,7 +173,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="row dxlisteetr pd"  v-if="form.dfdfdda==1">
+			<view class="row dxlisteetr pd" v-if="form.dfdfdda==1">
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">自提网点编号:</text>
 				</view>
@@ -166,7 +181,7 @@
 					<input type="text" value="" placeholder="请输入自提网点编号：" v-model="form.dsfsdfkq" />
 				</view>
 			</view>
-			<view class="row dxlisteetr pd"  v-if="form.dfdfdda==1">
+			<view class="row dxlisteetr pd" v-if="form.dfdfdda==1">
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">自提网点地址:</text>
 				</view>
@@ -188,7 +203,7 @@
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">卸货：</text>
 				</view>
-				<view class="col " >
+				<view class="col ">
 					<picker mode="selector" :range="rangea" @change="sddfdsrta">
 						<view class="z9 fz28 " v-if="ssdea<0">请选择</view>
 						<view class="z3 fz28" v-else>
@@ -198,12 +213,12 @@
 				</view>
 				<image src="../../static/img/right.png" mode="widthFix" class="rightydeer"></image>
 			</view>
-			
+
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
 					<text class="cz">回单类型：</text>
 				</view>
-				<view class="col " >
+				<view class="col ">
 					<picker mode="selector" :range="rangeb" @change="sddfdsrtb">
 						<view class="z9 fz28 " v-if="ssdeb<0">请选择</view>
 						<view class="z3 fz28" v-else>
@@ -220,8 +235,11 @@
 				<view class="fz28 z6 jjhhxeer">
 					<text class="cz">总运费：</text>
 				</view>
-				<view class="col">
-					<input type="text" disabled placeholder="请输入手工单号" v-model="form.feidera" />
+				<view class="col row">
+					<text class="cz">500</text>
+					<view class="col">
+						<button type="primary" class="dsftrrtrt cz">生成运费</button>
+					</view>
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -229,7 +247,7 @@
 					<text class="cz">现付：</text>
 				</view>
 				<view class="col">
-					<input type="text"  placeholder="请输入现付" v-model="form.feiderb" />
+					<input type="text" placeholder="请输入现付" v-model="form.feiderb" />
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -237,7 +255,7 @@
 					<text class="cz">到付：</text>
 				</view>
 				<view class="col">
-					<input type="text"  placeholder="请输入到付" v-model="form.feiderc" />
+					<input type="text" placeholder="请输入到付" v-model="form.feiderc" />
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -245,7 +263,7 @@
 					<text class="cz">欠款：</text>
 				</view>
 				<view class="col">
-					<input type="text"  placeholder="请输入欠款" v-model="form.feiderd" />
+					<input type="text" placeholder="请输入欠款" v-model="form.feiderd" />
 				</view>
 			</view>
 			<view class="row dxlisteetr pd">
@@ -253,11 +271,11 @@
 					<text class="cz">代收款：</text>
 				</view>
 				<view class="col">
-					<input type="text"  placeholder="请输入代收款" v-model="form.feidere" />
+					<input type="text" placeholder="请输入代收款" v-model="form.feidere" />
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="">
 			<uni-section title="货物备注" type="line"></uni-section>
 			<view class="row dxlisteetr pd">
@@ -282,89 +300,124 @@
 	export default {
 		data() {
 			return {
-				kxeer:1,//1起始 2 到达站
-				form:{
-					dsfsdfa:'',
-					dsfsdfb:'',
-					dsfsdfc:'',
-					dsfsdfd:'独行工匠',
-					dsfsdfe:'程国庆',
-					dsfsdff:'13538190372',
-					dsfsdfg:'',
-					dsfsdfh:'',
-					dsfsdfi:'',
-					dsfsdfj:'',
-					dsfsdfk:'',
-					dsfsdfl:'',
-					dsfsdfq:'',
-					dsfsdfw:'',
-					dfdfdda:'1',
-					feidera:200,
-					feiderb:'',
-					feiderc:'',
-					feiderd:'',
-					feidere:'',
-					feiderf:'',
-					dsfsdfkq:'',
-					dsfsdflq:''
+				arrayer: ['无锡', ' 永康', '金华', '武义'],
+				kxeer: 1, //1起始 2 到达站
+				xdeewrrty: false,
+				form: {
+					dsfsdfa: '',
+					dsfsdfb: -1,
+					dsfsdfc: '',
+					dsfsdfd: '独行工匠',
+					dsfsdfe: '程国庆',
+					dsfsdff: '13538190372',
+					dsfsdfg: '',
+					dsfsdfh: '',
+					dsfsdfi: '',
+					dsfsdfj: '',
+					dsfsdfk: '',
+					dsfsdfl: '',
+					dsfsdfq: '',
+					dsfsdfw: '',
+					dfdfdda: '1',
+					feidera: 200,
+					feiderb: '',
+					feiderc: '',
+					feiderd: '',
+					feidere: '',
+					feiderf: '',
+					dsfsdfkq: '',
+					dsfsdflq: ''
 				},
-				ssdea: -1,
-				rangea:['无','卸货（不上楼）','卸货（含上楼）'],
+				ssdea: 0,
+				rangea: ['无', '卸货（不上楼）', '卸货（含上楼）'],
 				ssdeb: -1,
-				rangeb:['回条','收条']
+				rangeb: ['回条', '收条']
 			}
 		},
 		components: {
 			dxarea
 		},
 		methods: {
-			ipoe (ider) {
+			hggdeetswer(e) {
+				this.form.dsfsdfb = e.target.value
+			},
+			ipoe(ider) {
 				this.kxeer = ider
 				this.$refs.showpopup.open()
 			},
-			closew (e) {
-				if(this.kxeer == 1){
-					this.form.dsfsdfb = e[0].name + '-' + e[1].name + '-'+e[2].name 
-				}else{
-					this.form.dsfsdfc = e[0].name + '-' + e[1].name + '-'+e[2].name 
+			closew(e) {
+				if (this.kxeer == 1) {
+					this.form.dsfsdfb = e[0].name + '-' + e[1].name + '-' + e[2].name
+				} else {
+					this.form.dsfsdfc = e[0].name + '-' + e[1].name + '-' + e[2].name
 				}
 				this.$refs.showpopup.close()
 			},
-			cewrrtxe(e){
-				this.form.dfdfdda= e.detail.value
+			cewrrtxe(e) {
+				this.form.dfdfdda = e.detail.value
 			},
-			sddfdsrta(e){
+			sddfdsrta(e) {
 				this.ssdea = e.detail.value
 			},
-			sddfdsrtb(e){
+			sddfdsrtb(e) {
 				this.ssdeb = e.detail.value
 			},
-			mhhad(){
+			mhhad() {
 				uni.chooseLocation({
-				    success: function (res) {
-				        console.log('位置名称：' + res.name);
-				        console.log('详细地址：' + res.address);
-				        console.log('纬度：' + res.latitude);
-				        console.log('经度：' + res.longitude);
-				    }
+					success: function(res) {
+						console.log('位置名称：' + res.name);
+						console.log('详细地址：' + res.address);
+						console.log('纬度：' + res.latitude);
+						console.log('经度：' + res.longitude);
+					}
 				});
+			},
+			xrerttswer(e) {
+				if (e.detail.value) {
+					this.xdeewrrty = true
+				} else {
+					this.xdeewrrty = false
+				}
+			},
+			jjhhggse(e) {
+				this.form.dsfsdfj = e
+				this.xdeewrrty = false
 			}
 		},
 		mounted() {}
 	}
 </script>
 <style scoped>
-.dxlisteetr{
+	.dxlisteetr {
 		line-height: 80upx;
+		position: relative;
 	}
-	.dxlisteetr input{
+
+	.dxlisteetr.ay {
+		z-index: 1000;
+	}
+
+	.dxlisteetr input {
 		height: 80upx;
 		font-size: 28upx;
 	}
-	.dsfdsrtxwe{
+
+	.dsfdsrtxwe {
 		padding-top: 15upx;
 	}
-	.jjhhxeer{
+
+	.jjhhxeer {
 		width: 200upx;
 	}
+
+	.dsftrrtrt {
+		width: 200upx;
+		height: 60upx;
+		line-height: 60upx;
+		font-size: 26upx;
+		position: relative;
+		top: 14upx;
+	}
+
+	
 </style>
