@@ -33,10 +33,10 @@
 		</view>
 		<view class="row dxlisteetr pd ay">
 			<view class="fz30 z6 jjhhxeer">
-				品名：
+				货名：
 			</view>
 			<view class="col">
-				<input type="text" value=""  @input="xrerttswer" placeholder="请输入品名" class="fz30" v-model="form.dsfsdfb" />
+				<input type="text" value=""  @input="xrerttswer" placeholder="请输入货名" class="fz30" v-model="form.dsfsdfb" />
 			</view>
 			<view class="kjdsjfrdrte" v-if="xdeewrrty">
 				<view class="fz26 bbm" v-for="(sd,idx) in 5" @tap="jjhhggse('选项'+idx)">

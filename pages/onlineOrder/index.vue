@@ -75,7 +75,7 @@
 
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
-					<text class="cz">收货人:</text>
+					<text class="red">*</text><text class="cz">收货人:</text>
 				</view>
 				<view class="col ">
 					<input type="text" value="" placeholder="请输入收货人" v-model="form.dsfsdfg" />
@@ -83,7 +83,7 @@
 			</view>
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
-					<text class="cz">电话:</text>
+					<text class="red">*</text><text class="cz">电话:</text>
 				</view>
 				<view class="col ">
 					<input type="number" value="" placeholder="请输入电话" v-model="form.dsfsdfh" />
@@ -91,7 +91,7 @@
 			</view>
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
-					<text class="cz">收货地址:</text>
+					<text class="red">*</text><text class="cz">收货地址:</text>
 				</view>
 				<view class="col ">
 					<input type="text" value="" placeholder="请输入收货地址" v-model="form.dsfsdfi" />
@@ -126,7 +126,7 @@
 			</view>
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
-					<text class="cz">件数:</text>
+					<text class="red">*</text><text class="cz">件数:</text>
 				</view>
 				<view class="col ">
 					<input type="number" value="" placeholder="请输入件数" v-model="form.dsfsdfl" />
@@ -134,7 +134,7 @@
 			</view>
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
-					<text class="cz">重量(kg):</text>
+					<text class="red">*</text><text class="cz">重量(kg):</text>
 				</view>
 				<view class="col ">
 					<input type="number" value="" placeholder="请输入重量" v-model="form.dsfsdfq" />
@@ -142,7 +142,7 @@
 			</view>
 			<view class="row dxlisteetr pd">
 				<view class="fz30 z6 jjhhxeer">
-					<text class="cz">体积(m³):</text>
+					<text class="red">*</text><text class="cz">体积(m³):</text>
 				</view>
 				<view class="col ">
 					<input type="number" value="" placeholder="请输入体积" v-model="form.dsfsdfw" />
@@ -236,7 +236,7 @@
 					<text class="cz">总运费：</text>
 				</view>
 				<view class="col row">
-					<text class="cz">500</text>
+					<text class="cz fz30">500</text>
 					<view class="col">
 						<button type="primary" class="dsftrrtrt cz">生成运费</button>
 					</view>
@@ -318,7 +318,7 @@
 					dsfsdfl: '',
 					dsfsdfq: '',
 					dsfsdfw: '',
-					dfdfdda: '1',
+					dfdfdda: '',
 					feidera: 200,
 					feiderb: '',
 					feiderc: '',

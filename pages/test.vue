@@ -15,8 +15,8 @@
 			                            <td>1</td>
 			                            <td>53</td>
 			                            <td width="200px">
-											<view class="dian deeerrtxer">
-												留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦
+											<view class=" deeerrtxer">
+												留仙洞大厦留仙洞大厦留仙洞大厦留仙洞大厦
 											</view>
 										</td>
 										 <td>
@@ -218,5 +218,7 @@ export default {
 	    }
 		.deeerrtxer{
 			max-width: 400upx;
+			text-align: left;
+			line-height: 1.5;
 		}
 </style>
